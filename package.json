@@ -1,0 +1,24 @@
+{
+  "name": "nodejs-firststep",
+  "version": "1.0.0",
+  "description": "My first application",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arjana12345/nodejs-firststep.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "first",
+    "application"
+  ],
+  "author": "ArjanaDev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Arjana12345/nodejs-firststep/issues"
+  },
+  "homepage": "https://github.com/Arjana12345/nodejs-firststep#readme"
+}
