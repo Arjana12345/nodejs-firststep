@@ -22,6 +22,17 @@ npm -v
 > Run npm init
 auto matically it will create package.json file in your directory
 
+# Run 
+> Run file - node hello-world.js
+> Run app  - npm start
+
+# Test
+> Run - npm test
+
+# Run by npm cmd
+npm start
+
+#
 
 
 
