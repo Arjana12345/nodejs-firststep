@@ -6,6 +6,9 @@ const fs = require('fs');
 const app = express();
 const port = 3000;
 
+/**
+ * File name to upload
+ */
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     
@@ -16,18 +19,35 @@ const storage = multer.diskStorage({
   },
 });
 
+/***
+ * File validation
+ */
+const upload = multer({ 
+    storage: storage,
+    limits: { fileSize: 10 * 1024 * 1024 }
+});
 
-const upload = multer({ storage: storage });
+/**
+ * Make directory to upload
+ *  */
 if (!fs.existsSync('./uploaded_file')) {
   fs.mkdirSync('./uploaded_file');
 }
 
+/***
+ * post request
+ */
 app.post('/upload', upload.single('file'), (req, res) => {
   if (!req.file) {
     return res.status(400).send('No file uploaded');
   }
   res.send(`File uploaded successfully: ${req.file.filename}`);
 });
+
+/***
+ * get request - front end for end-user 
+ */
+
 
 app.get('/', (req, res) => {
   res.send(`
@@ -39,6 +59,10 @@ app.get('/', (req, res) => {
   `);
 });
 
+
+/**
+ * server connection
+ */
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
