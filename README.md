@@ -32,7 +32,7 @@ auto matically it will create package.json file in your directory
 # Run by npm cmd
 npm start
 
-#
+# npm install express multer
 
 
 
