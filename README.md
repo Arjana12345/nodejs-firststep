@@ -29,6 +29,11 @@ auto matically it will create package.json file in your directory
 # Test
 > Run - npm test
 
+# Run by npm cmd
+npm start
+
+#
+
 
 
 
